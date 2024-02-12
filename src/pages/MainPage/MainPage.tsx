@@ -48,7 +48,7 @@ export default function MainPage() {
       )}
       {isAuth && (
         <Box maxWidth={520} my={3} mx="auto">
-          {`${T.HELLO}, ${email}`}{' '}
+          {`${T.HELLO}, ${email || 'Username'}`}
         </Box>
       )}
     </Box>

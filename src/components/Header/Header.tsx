@@ -87,29 +87,6 @@ export default function Header() {
                 {T.WELCOME_PAGE}
               </Typography>
             </MenuItem>
-            <MenuItem
-              onClick={() => {
-                navigate('/graphiql');
-                handleCloseNavMenu();
-              }}
-              data-testid={'menu-item-graphql'}
-              sx={{
-                opacity: isAuth ? 1 : 0.1,
-                pointerEvents: isAuth ? 'auto' : 'none',
-              }}
-            >
-              <Typography
-                textAlign="center"
-                color={
-                  location.pathname === '/graphiql'
-                    ? 'primary.main'
-                    : 'text.primary'
-                }
-              >
-                {T.GRAPHIQL_PAGE}
-              </Typography>
-            </MenuItem>
-
             <Divider />
             {isAuth && (
               <MenuItem
@@ -173,23 +150,6 @@ export default function Header() {
             color={location.pathname === '/' ? 'primary.main' : 'text.primary'}
           >
             {T.WELCOME_PAGE}
-          </Link>
-
-          <Link
-            component={NavLink}
-            to="/graphiql"
-            px={2}
-            color={
-              location.pathname === '/graphiql'
-                ? 'primary.main'
-                : 'text.primary'
-            }
-            sx={{
-              opacity: isAuth ? 1 : 0.1,
-              pointerEvents: isAuth ? 'auto' : 'none',
-            }}
-          >
-            {T.GRAPHIQL_PAGE}
           </Link>
         </Box>
 
